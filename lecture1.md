@@ -6,10 +6,6 @@ Shell is an interafce to the operating system
 
 	1. Run programs  
 	2. Manipulate files  
-=======
-1. Run programs  
-2. Manipulate files
-
 
 Two kinds of shells:
 
