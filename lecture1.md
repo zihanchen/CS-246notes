@@ -3,13 +3,13 @@
 ##Linux Shell
 
 Shell is an interafce to the operating system  
-<<<<<<< HEAD
+
 	1. Run programs  
 	2. Manipulate files  
 =======
 1. Run programs  
 2. Manipulate files
->>>>>>> 012532568fb366b9828f89f572eb2053a745f75f
+
 
 Two kinds of shells:
 
