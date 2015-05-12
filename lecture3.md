@@ -103,18 +103,18 @@ $> ls $(echo $(ls))  #this one is fine
 
 
 ###Find 
-	*find is a command to search for file in a directory hierarchy
-	*`$> find [path] [expr]`
-	*start at path and list files matching expr
-	*if path is omitted, start at current dircetory "."
+	* find is a command to search for file in a directory hierarchy
+	* `$> find [path] [expr]`
+	* start at path and list files matching expr
+	* if path is omitted, start at current dircetory "."
 ```bash
 $> find . -name "*.txt"
 ```
 
 ####Pattern matching in tex Files 
-	*fool grep
-	*egrep 
-	*usage: egreap pattern file(s)
+	* fool grep
+	* egrep 
+	* usage: egreap pattern file(s)
 
 #####Example 1
 
