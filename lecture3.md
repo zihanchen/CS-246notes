@@ -60,7 +60,8 @@ $> sort -r -n --key=2,2 -t '|' cs246.out | sort -u -s --key=3,3 -t '|'| sort -r 
 ```
 
 ####Exercise
-Who are the top 10 most active (post most number of tweets of retweets)?
+Who are the top 10 most active (post most number of tweets of retweets)?  
+
 
 
 What if we want the out put of a program as the <strong>argument</strong> of another? Is this possible?
@@ -72,7 +73,7 @@ $> echo "Today is `date` and I am `whoami`"
 $> Today is Tue 12 May 2015 12:15:04 EDT
 ```
 
->and single quotes depress this 
+>and _single quotes suppress this_
 
 ```bash
 $> echo 'Today is `date` and I am `whoami`'
@@ -91,7 +92,7 @@ $> Today is Tue 12 May 2015 12:15:04 EDT
 $> ls `echo `ls``  #system does not understand this
 ```
 
-```bahs
+```bash
 $> ls $(echo $(ls))  #this one is fine
 ```
 
@@ -127,5 +128,31 @@ $> egrep cs246 index.shtml
 >What kinds of patterns can we search for?
 >
 >Regular expressions(**NOT THE SAME AS GOLBBING PATTERNS**)
+
+
+#####Example 2  
+
+Search for cs246 or CS246
+
+```bash
+$> egrep "CS246|css246" index.shtml
+```
+or 
+```bash
+$> egrep "(CS|cs)246" index.shtml
+```
+
+There is another quotes
+```bash
+$> egrep "[Cc][sS]246" index.shtml
+``` 
+is equivalent to
+```bash
+$> egrep "(C|c)(S|s)246" index.shtml
+```
+
+>[] matches any one of the characters beween [ and ]
+>
+>[abc] is equivalent to (a|b|c)
 
 
