@@ -92,12 +92,40 @@ $> ls `echo `ls``  #system does not understand this
 ```
 
 ```bahs
-$> ls $(echo $(ls)) #this one is fine
+$> ls $(echo $(ls))  #this one is fine
 ```
 
 >What is the difference between pipes and input/output redirection?
+>
 >Pipes are used between commands.It sends the output of one command to
 >the input of another command input and output redirection is between
 > a command and a file.
+
+
+###Find 
+	- find is a command to search for file in a directory hierarchy
+	- $> find [path] [expr]
+	- start at path and list files matching expr
+	- if path is omitted, start at current dircetory "."
+```bash
+$> find . -name "*.txt"
+```
+
+####Pattern matching in tex Files 
+	- fool grep
+	- egrep 
+	- usage: egreap pattern file(s)
+
+#####Example 1
+
+Print every line in index.shtml that contains cs246
+
+```bash
+$> egrep cs246 index.shtml
+```
+
+>What kinds of patterns can we search for?
+>
+>Regular expressions(**NOT THE SAME AS GOLBBING PATTERNS**)
 
 
