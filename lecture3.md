@@ -113,10 +113,9 @@ $> find . -name "*.txt"
 ```
 
 ####Pattern matching in tex Files  
-
-	* fool grep
-	* egrep 
-	* usage: egreap pattern file(s)
+* fool grep
+* egrep 
+* usage: egreap pattern file(s)
 
 #####Example 1
 
