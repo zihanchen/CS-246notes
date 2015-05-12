@@ -61,6 +61,7 @@ $> sort -r -n --key=2,2 -t '|' cs246.out | sort -u -s --key=3,3 -t '|'| sort -r 
 
 ####Exercise
 Who are the top 10 most active (post most number of tweets of retweets)?  
+  
 --------------------------------------------------------------------
 What if we want the out put of a program as the <strong>argument</strong> of another? Is this possible?
 
@@ -102,18 +103,18 @@ $> ls $(echo $(ls))  #this one is fine
 
 
 ###Find 
-	- find is a command to search for file in a directory hierarchy
-	- $> find [path] [expr]
-	- start at path and list files matching expr
-	- if path is omitted, start at current dircetory "."
+	*find is a command to search for file in a directory hierarchy
+	*`$> find [path] [expr]`
+	*start at path and list files matching expr
+	*if path is omitted, start at current dircetory "."
 ```bash
 $> find . -name "*.txt"
 ```
 
 ####Pattern matching in tex Files 
-	- fool grep
-	- egrep 
-	- usage: egreap pattern file(s)
+	*fool grep
+	*egrep 
+	*usage: egreap pattern file(s)
 
 #####Example 1
 
