@@ -62,8 +62,7 @@ $> sort -r -n --key=2,2 -t '|' cs246.out | sort -u -s --key=3,3 -t '|'| sort -r 
 ####Exercise
 Who are the top 10 different people who are active (post most number of tweets of retweets)?  
 
-```bash
-$> 
+ 
   
 --------------------------------------------------------------------
 What if we want the out put of a program as the <strong>argument</strong> of another? Is this possible?

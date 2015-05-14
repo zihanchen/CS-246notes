@@ -93,7 +93,7 @@ $> -rw-r----- 1 present staff 25 13 May 22:36 abc.txt
 |-------|:-------------:| ----------|
 |r		|contents can be read|directory's contents can be read|
 |w		|contents can be modified|directory can be modified|
-|x		|can be executed as a program||
+|x		|can be executed as a program|directory can be open|
 
 >Note: if a directory's execute bit is not set, you cannot enter that directory nor can you
 >access any subdirectory within that directory
@@ -122,5 +122,10 @@ $> 1
 > To fetch a value of a variable, precede with $  
 >When setting a variable do not use $  
 >Note: All variables have type stirng, X is the sting "1"  
+
+####Several "Global" variables set up by us:  
+Most important for us is `${PATH}`
+- it is a list of directions 
+- when you type a command the shell 
 
 
