@@ -68,7 +68,7 @@ $> ls | egrep -v "cs246"
 - put expressions in **parenthesis** to **override** the precedence  
   
 ##Permissions  
-- ls -l gives a long "long form" directory listing
+- `$> ls -l` gives a long "long form" directory listing
 
 ```bash
 $> -rw-r----- 1 present staff 25 13 May 22:36 abc.txt
@@ -109,3 +109,18 @@ $> chmod mode file
 |g(group)			|- (remove)	|w			|
 |o(other)			|=(set exactyl)|x		|
 |a(all)				|			|			|
+
+
+##Variables  
+Sometimes we want to save data and reuse data in the shell  
+We can use shell variables for this:
+```bash
+$> x=1 #no space here!
+$> echo $x
+$> 1
+```
+> To fetch a value of a variable, precede with $  
+>When setting a variable do not use $  
+>Note: All variables have type stirng, X is the sting "1"  
+
+
