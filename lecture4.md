@@ -38,6 +38,10 @@ $> egrep "^cs246$" index.shtml #<-- line that just contain "cs246"
 ```bash
 $> egrep "^.+$" index.shtml #<-- all non-empty lines
 ```
+>Note: can use {x, y} to show occurences between x and y
+```bash
+$> egrep "[aeiou].*[aeiou] {2,}" index.shtml  #2 or more occurences
+```
   
 ##Example 1  
 Print all lines with even length
