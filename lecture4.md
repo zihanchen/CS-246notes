@@ -42,6 +42,8 @@ $> egrep "^.+$" index.shtml #<-- all non-empty lines
 ```bash
 $> egrep "[aeiou].*[aeiou] {2,}" index.shtml  #2 or more occurences
 ```
+- \ supresses the special meaning characters  
+so `\.` just a dot character
   
 ##Example 1  
 Print all lines with even length
