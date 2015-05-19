@@ -132,6 +132,13 @@ $> 1
 ####Several "Global" variables set up by us:  
 Most important for us is `${PATH}`
 - it is a list of directions 
-- when you type a command the shell 
+- when you type a command the shell will searches these directories \\
+in order for the program with that name
 
+>we cannot run the program in the current directory because the current directory is not 
+>in the PATH. However, we can add it to the PATH
+
+```bash
+$> ./a.out #you can now run the program a.out
+```
 
