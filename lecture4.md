@@ -58,7 +58,7 @@ $> ls | egrep "^[^a]*a{^a}*$"
 ```
 
 ##Example 3  
-Pint all words in global directionary that start with e and consist of 5 charactres.  
+Print all words in global directionary that start with e and consist of 5 charactres.  
 ```bash
 $> egrep "^e....$"
 ```
@@ -141,4 +141,5 @@ in order for the program with that name
 ```bash
 $> ./a.out #you can now run the program a.out
 ```
+- should not contian ".", especially as the first element
 
