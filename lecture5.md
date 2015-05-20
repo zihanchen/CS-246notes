@@ -107,7 +107,24 @@ Loop through and print numbers from 1 to $1
 #count limit ----- counts the numbers from 1 to limit
 
 unsage() {
-	echo "Usage
+	echo "Usage: $0 limit" 1>&2
+	echo " where limits is at list 1" 1>&2
+	exit 1
+}
+
+if [ $# -ne 1]; then 
+	usage
+fi
+
+if [ $1 -lt 1 ]; then
+	usage
+fi
+
+x=1
+while [ $x -le $1 ]; do
+	echo $x
+	x=$((x + 1)) #arithmetic
+done
 ```  
 Suppose we want to loop over a list
 ####Example 3
