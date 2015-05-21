@@ -42,8 +42,8 @@ and now our pwd is in cs246
 		- white-box testing 
 			- test every decision alternative at least once
 			- test all the functions and modules
-			-
-		- bray-box testing 
+		- gray-box testing
+		- test harness 
 
 ###Example: Calculates income tax  
 income < 10k : no tax
@@ -68,3 +68,34 @@ income >= 100k : 20%
 #####Error Guessing  
 1. 5000
 2. "dog"
+
+##Testing Strategies  
+- Unit Testing 
+- Integration Test  
+Once system is integrated:  
+- Functional Testing
+- Regression Testing
+- System Testing
+- Performance Testing
+- Volume Testing 
+- Stress Testing 
+- Usability Testing: test whether users have the skill necessary to operate the system
+- Security Testing: test whether programs and data are secure
+- Acceptance Testing: does the system satisfies waht the client ordered  
+  
+    
+##Tester  
+- A program should **not** be tested by its writer, but in practice this often occurs.  
+- Points to the need for a clear specification to protect both the client and developer.
+
+
+##C++  
+Let's look at a C program
+```C
+#include<stdio.h>
+
+int main() {
+	printf("Hello, world!\n");
+	return 0;
+}
+```
