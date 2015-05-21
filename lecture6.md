@@ -99,3 +99,33 @@ int main() {
 	return 0;
 }
 ```
+Now see the C++ version:
+```C++
+#include<iostream>
+
+unsing namespace std
+
+int main() {
+	cout<<"Hello, world!"<<endl;
+	return 0;
+}
+```
+- `#include<iostream> imports I\O descriptions
+- output mechanism: std::cout << data << data << data ...\\
+(where data can be numbers/srings etc.)
+- std::endl prints a new line and forces a buffer finish
+- All our C favourites are still available in C++(printf, stdio.h)
+- main __must__ return int in C++
+- using namsppace std allows us to refer to std::cout, std::endl as just cout and endl
+- Return in main is optional. Value signals to shell successful(0) or unsuccessful(not 0) execution. No return statement results in 0 being returned  
+  
+###Compiling C++ programs
+```bash
+$> g++ myprog.cc
+```
+>a.out is default name for executable  
+```bash
+$> g++ myprog.cc -o myprog
+```
+>you can name you program using "-o"
+
