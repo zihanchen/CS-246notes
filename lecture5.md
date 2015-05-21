@@ -165,9 +165,28 @@ answer(){ # $1, $2 are function's parameters
 	else
 		echo "This month: on the ${1}th"
 	fi
-done
-```
+;
 
+answer $(cal | awk ' {print $6} ' | egrep "[0-9]" | tail -1)
+```
+>Actually we can get the payday of anymoth
+```bash
+#!/bin/bash
+
+answer(){ # $1, $2 are function's parameters
+	if [ $2 ]; then
+		preamble=${2}
+	else
+		preamble=${This month}
+	if [ $1 -eq 31 ]; then
+		echo "${preamble}: on the ${1}st"
+	else
+		echo "${preamble}: on the ${1}th"
+	fi
+;
+
+answer $(cal $1 $2 | awk ' {print $6} ' | egrep "[0-9]" | tail -1) $1
+```
 
 
 
