@@ -36,7 +36,13 @@ and now our pwd is in cs246
 			- boundary value testing
 			- error guessing
 			- extreme test cases
+			- black-box case can and *should be* written **before**  
+			development as it can reveal problems with requirements  
+			or understanding
 		- white-box testing 
+			- test every decision alternative at least once
+			- test all the functions and modules
+			-
 		- bray-box testing 
 
 ###Example: Calculates income tax  
@@ -60,5 +66,5 @@ income >= 100k : 20%
 2. 800000000000000
 
 #####Error Guessing  
-1. -5000
+1. 5000
 2. "dog"
