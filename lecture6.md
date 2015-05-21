@@ -45,8 +45,20 @@ income < 10k : no tax
 income >= 100k : 20%  
   
 ----------------------------------------------------  
-Equivalent Partition
+#####Equivalent Partition  
 1. 5000
 2. 75000  
 3. 200000
+  
+#####Boundry cases  
+1. 999999
+2. 10000  
+3. 10000.01  
 
+#####Edge cases  
+1. 0
+2. 800000000000000
+
+#####Error Guessing  
+1. -5000
+2. "dog"
