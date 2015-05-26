@@ -106,11 +106,11 @@ Now see the C++ version:
 unsing namespace std
 
 int main() {
-	cout<<"Hello, world!"<<endl;
+	couti << "Hello, world!" << endl;
 	return 0;
 }
 ```
-- `#include<iostream> imports I\O descriptions
+- #include<iostream> imports I\O descriptions
 - output mechanism: std::cout << data << data << data ...\\
 (where data can be numbers/srings etc.)
 - std::endl prints a new line and forces a buffer finish
