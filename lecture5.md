@@ -172,7 +172,6 @@ answer $(cal | awk ' {print $6} ' | egrep "[0-9]" | tail -1)
 >Actually we can get the payday of anymoth
 ```bash
 #!/bin/bash
-
 answer(){ # $1, $2 are function's parameters
 	if [ $2 ]; then
 		preamble=${2}
