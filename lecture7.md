@@ -50,5 +50,67 @@ There could be any number(>= 1)of spaces, tabs and newlines between x and y
 
 - if read fialed: cin.fail() returns true
 - if eof: cin.fail() and cin.eof() both return true
-- won't happen until we attempt to read and fail
+- won't happen until we attempt to read and fail  
+
+```C++
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int i;
+	while (true) {
+		cin >> i;
+		 if (cin.fail()) break;
+		 cout << i << endl;
+		 }
+}
+```
+- There is and implicit conversion between cin and void*
+	- if(cin):
+		- true if !cin.fail() (return non-Null value)
+		- false if cin.fail() (null returned for cin)  
+
+###About >>
+- `>>` is the C right bit shift operator:  
+a >> b shift a bits to the right by b spots
+- but when cin is on 'the left' side of >>, then it 
+is the "get from" operator  
+- operator >>
+	- function which can be called in a special way
+	- Input: cin(istream), data(various types)
+	- Output: return cin (istream)
+	- That's why we can do the following
+	```C++
+	cin >> x >> y >> z; //returns cin
+	```
+so we can improve the previous program into:
+```C++
+int main() {
+	int i;
+	while (c >> i) {
+	cout << i << endl;
+	}
+}
+```
+>Why is this not the ideal way to do this?  
+>cannot recover in cawe of invalid input  
+
+```C++
+int main() {
+	int i;
+	while (true) {
+		if (!(cin >> i)) {
+			if(cin.eof()) break;
+			else {
+				cin.clear();
+				cin.ignore();
+			}
+		cout << i << endl;
+		}
+	}
+}
+```
+
+
 
