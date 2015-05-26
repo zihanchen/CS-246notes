@@ -128,4 +128,5 @@ $> g++ myprog.cc
 $> g++ myprog.cc -o myprog
 ```
 >you can name you program using "-o"
+>we can also replace `using namespace std;` with `using std::out`
 
