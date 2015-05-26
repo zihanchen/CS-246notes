@@ -106,11 +106,31 @@ int main() {
 				cin.clear();
 				cin.ignore();
 			}
+		else {
 		cout << i << endl;
 		}
 	}
 }
 ```
+
+##Reading Strings  
+- C++ provides the type std::string(via `#include<string>`) for 
+working with strings
+- Basically, it is a better version of C-string(char *)
+```C++
+#include<string>
+#include<iostream>
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+	cout << s << endl;
+}
+```
+- Semantics reads the next characters into a string
+(Skipping leading whitespaces) and stops one a  
+- Will read from current position to next new line into Semantic
 
 
 
