@@ -29,7 +29,9 @@ of integers and floating points(binary numbers)
 ```C++
 #include<iostream>
 
-using std::out 
+using std::cout;
+using std::cin;
+using std::endl;
 
 int main() {
 	int x, y;
