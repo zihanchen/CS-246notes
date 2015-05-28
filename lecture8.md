@@ -137,3 +137,59 @@ int main() {
 - Overloads **MUST** differ in either # or type of some parameters
 - cannot overload on return type
 
+##Declaration before use
+- In C++, we must declare something before we can use it
+- So, how is mutual recusion done?
+```C++
+bool odd (unsigned int n); //A forward delaration
+
+bool even(unsigned int n) {
+	if (n == 0) return true;
+	else return sood(n - 1);
+}
+
+bool odd(unsigned int n) {
+	if (n == 0) return true;
+	else return even(n - 1);
+}
+```
+- Solution use a foward declaration  
+
+There is an important distinction between  
+- declaration: only asserts the exstance of an entity
+- definition: full definition, including allocaiont of space, if needed
+
+##Pointers
+
+Recall
+```C++
+int n = 5;
+int *p = &n;
+cout << p << endl  //hex # address
+cout << *p << endl //5
+```
+```C++
+int **pp;
+pp = &p;
+**p = 6;
+```
+
+##Arrays
+```C++
+int a[] = {1, 2, 4, 8};
+```
+- The name of an array is just short hand for the address of the first element of the array &a[0]
+- `*a` is equivalent to `a[0]`
+- `*(a+1)` is `a[1]`
+- arrays do not have index bounds checks(we can do a[1000])
+
+##Structure  
+Structs are a mechanism to group related data
+- hetrogenious types
+```C++
+struct Node {
+	int data;
+	Node *next;
+};
+```
+
