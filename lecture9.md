@@ -43,7 +43,7 @@ we can limit the numbers to the specified bits
 
 ##Constants  
 - const provides a mechanism to ensure a variable's value cannot change
-- `const in MAXIMUM = 100;`
+- `const int MAXIMUM = 100;`
 - A constant **must be** initialized
 - Declare as many things as possible(help catch errors)
 - Prefer constants to magic numbers or # define maccros
@@ -57,5 +57,10 @@ but we __cannot__ do `n == mynode`
 >It is a pointer to a constant int  
 >We cannot change the value of n
 >so `p = &x` is valid (p can be reassigned)  
->`*p = 5` is invalid (*p cannot be reassigned)
+>`*p = 5` is invalid (*p cannot be reassigned)  
+- now consider `int *const p = &n;`
+- constant pointer to (non-const) integer
+	- `*p = 7;` can change *p
+	- `p = &x;` cannot point to something else
+
 
