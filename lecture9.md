@@ -44,3 +44,18 @@ we can limit the numbers to the specified bits
 ##Constants  
 - const provides a mechanism to ensure a variable's value cannot change
 - `const in MAXIMUM = 100;`
+- A constant **must be** initialized
+- Declare as many things as possible(help catch errors)
+- Prefer constants to magic numbers or # define maccros
+- Can declare other things const
+```C++
+Node mynode = {5, NULL};
+const Node cn = mynode;
+```
+but we __cannot__ do `n == mynode`  
+>What does `int const *p = &n;` mean ?(`int n = 8;`)  
+>It is a pointer to a constant int  
+>We cannot change the value of n
+>so `p = &x` is valid (p can be reassigned)  
+>`*p = 5` is invalid (*p cannot be reassigned)
+
