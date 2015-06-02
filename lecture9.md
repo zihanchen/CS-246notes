@@ -37,5 +37,10 @@ struct S {
 	int i : 3;   //3 bits
 	int j : 7;   // 7 bits
 	int k : 6;   // 6 bits
-};
+}s;
 ```
+we can limit the numbers to the specified bits  
+
+##Constants  
+- const provides a mechanism to ensure a variable's value cannot change
+- `const in MAXIMUM = 100;`
