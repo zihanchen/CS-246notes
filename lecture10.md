@@ -20,4 +20,17 @@ int f(ReallyBig &rb) {...} //pass an alias:efficient but allows changes to propa
 int h(const ReallyBig &rb) {...} //efficient: no copy and parameter cannot be changed
 ```
 - Advice: Prefer passy-by-reference-to-const over pass-by-value for anything larger than an int  
+- `int f(int &n){...} // calling f(5) is invalid`
+- cannot initialize a reference with a literal value. If n changes ,cannot change literal
+- `int g(const int &n){...} //now f(5) is valid`
+- since n can never change compiler will allow thiis  
 
+##Dynamic Memory Allocation
+---
+Recall from C:  
+```C
+int size =  ;
+int *p = malloc(size * sizeof(int));
+...
+free(p);
+```
