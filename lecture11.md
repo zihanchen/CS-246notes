@@ -1,10 +1,10 @@
 #Lecture 11  
 
-##The preproccessor
+##The preprocessor
 
 - The code you write is not the code that the compiler sees
-- Before compilation the Preproccessor is run on your code  
-- Preproccessor 
+- Before compilation the Preprocessor is run on your code  
+- Preprocessor 
 
 - Three main types of preprocessor statements
 	- file inclusion
@@ -98,4 +98,15 @@ of global variable
 >In .h: `extern int globalNum;`  
 >In one.cc: `int globalNum`  
 
-
+Note: - `g++ -c` says to compile only, do not link files, do not build executable  
+and output an object file(.o)
+- object file is an "almost ready" executable just needs it's empty pieces to be filled in  
+- main.cc and linAlg.cc include vectro.h and linAlg.h
+- linAlg.h includes vector.h
+- So we end up with two definitions of struct vec;
+- Need to prevent files from being included more than once. How?
+- Solution: Included guard
+```C++
+#ifndef __VECTOR_H__
+#define __VECTOR_H__
+```
