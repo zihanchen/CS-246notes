@@ -109,4 +109,18 @@ and output an object file(.o)
 ```C++
 #ifndef __VECTOR_H__
 #define __VECTOR_H__
+
+struct Vec {
+	int x;
+	int y;
+};
+
+#endif
 ```
+the file is still included twice, but the second time the content is gone  
+- **ALWAYS** put include guards in your header files
+- **NEVER** put `using namespace std;` in header files
+- This will force it upon whomever includes your files and can result in  
+name conflicts  
+- Always refer to cin, cout, string, etc. by their fullnames in header files
+(e.g. `std::cout``std::cin`)
