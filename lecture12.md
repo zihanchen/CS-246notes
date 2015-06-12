@@ -40,7 +40,7 @@ bruce.grade(); //method call, use bruce's assigns, mt and final
 ```C++
 Student Billy = {60, 70, 80};
 ```
-this is okay bt it is limited  
+this is okay but it is limited  
 - can't ensure grades are between 0 and 100
   
 What if we included a method whose only job is to perform object initialization  
