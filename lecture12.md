@@ -33,4 +33,16 @@ bruce.grade(); //method call, use bruce's assigns, mt and final
 
 - `this` is a pointer to the object upon which the method was called  
 (e.g`bruce.grade(); //then this == &bruce`)
+- Only use `this` when you need to disambiguate a field/method from something else  
+- Note methods can be overloaded in the same manner as other C++ functions
+
+##Initializing Objects
+```C++
+Student Billy = {60, 70, 80};
+```
+this is okay bt it is limited  
+- can't ensure grades are between 0 and 100
+  
+What if we included a method whose only job is to perform object initialization  
+- we call it a _constructor_
 
