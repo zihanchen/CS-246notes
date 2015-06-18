@@ -62,10 +62,10 @@ Why should they be the same
 >Can we initialize them in the constructor?
 >No, it's too late. Need to be initialized by then.  
 >Need to perform initialization before constructor body runs.  
->What happens when an object is created?
->1. Spare for the object is allocated
->2. Default constructors called for field members
->3. Our initialization need toe go here
+>What happens when an object is created?  
+>1. Spare for the object is allocated  
+>2. Default constructors called for field members  
+>3. Our initialization need toe go here  
 >4. Constrcutor body runs.  
 
 Solution: Member initialization list  
