@@ -152,11 +152,17 @@ struct Node {
 	int data;
 	Node *next;
 	Node (int data, Node *next): data(data), next(next) {}
+
 	Node(const Node &n): data(n.data), next(n.next == NULL ? NULL : new Node(*nnext)) {}
 };
 ```
 above is a deep copy( copy the whole list)  
 deep copy(copies entire list), then you Must implement your own copy constructor  
-- Terary operator `conditional expression ? true : false;`
+- Terary operator `conditional expression ? true : false;`  
+  
+The copy constructor is called:  
+- Whenever an object is initializedwith another object(Node =m = n)  
+- When an object is passed by value
+- Whenever an object is returned by a function(return by value)
 										
 
