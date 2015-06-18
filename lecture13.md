@@ -67,7 +67,10 @@ Why should they be the same
 >2. Default constructors called for field members
 >3. Our initialization need toe go here
 >4. Constrcutor body runs.  
-Solution: Mmver initialization list
+
+Solution: Member initialization list  
+here is an example:  
+
 ```C++
 struct MyStruct {
 	const int myConst;
