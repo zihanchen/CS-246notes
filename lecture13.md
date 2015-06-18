@@ -80,7 +80,9 @@ int main() {
 	
 }
 ```
-An initialization list can be more efficient then setting the fields in the body, Why?
+  
+An initialization list can be more efficient then setting the fields in the body, Why?  
+
 ```C++
 struct A {
 	A() { cout << "A ctor" << endl; }
