@@ -145,7 +145,8 @@ int main() {
 
 >When is the default copy constructor not correct?  
 >simple copy of fileds, only first node is copied  
->we call this a shallow copy
+>we call this a shallow copy  
+>so we need to improve this  
 ```C++
 struct Node {
 	int data;
