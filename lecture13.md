@@ -65,7 +65,7 @@ Why should they be the same
 >What happens when an object is created?  
 >1. Spare for the object is allocated  
 >2. Default constructors called for field members  
->3. Our initialization need toe go here  
+>3. Our initialization need to go here  
 >4. Constrcutor body runs.  
 
 Solution: Member initialization list  
