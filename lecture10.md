@@ -145,7 +145,7 @@ struct Grade {
 
 ostream &operator<<(ostream &out, const Grade &g) {
 	out << g.theGrade << "%";
-	return out;
+	return out; //return out enable the function to cascading
 }
 
 istream &operator>>(istream &in, const 

@@ -45,4 +45,12 @@ this is okay but it is limited
   
 What if we included a method whose only job is to perform object initialization  
 - we call it a _constructor_
-
+```C++
+struct Student {
+	int assigns, mt, final;
+	Student(int assigns, int mt, int final) { //<--- this is a constructor
+		this->assigns = assigns;
+		this->mt = mt;
+		this->final = final;
+	}
+};
