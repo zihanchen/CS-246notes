@@ -155,6 +155,8 @@ struct Node {
 	Node(const Node &n): data(n.data), next(n.next == NULL ? NULL : new Node(*nnext)) {}
 };
 ```
-- above is a deep copy( copy the whole list)
+above is a deep copy( copy the whole list)  
+deep copy(copies entire list), then you Must implement your own copy constructor  
+- Terary operator `conditional expression ? true : false;`
 										
 
