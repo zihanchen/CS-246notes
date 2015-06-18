@@ -74,7 +74,6 @@ struct MyStruct {
 	const int &myRef;
 	MyStruct(int c, int &r): myConst(c), myRef(r){}
 };
-
 int main() {
 		int z = 5;
 		MyStruct m(10, 2);
