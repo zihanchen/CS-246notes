@@ -104,5 +104,24 @@ int main() {
 - mutable fields can be canged even if object is const
 
 ##Assignment Operator
-- Assignment opeartor uses compiler supplied definition
-
+```C++
+Student Billy(60, 70, 80);
+Student bob = billy; // copy constructor
+Student s; //default constructor
+s = billy; //copy but no construction
+```
+- Assignment opeartor uses compiler supplied version	
+```C++
+Node &Node::operator=(const Node &other) {
+	if (this == &other) return *this;//this is for self assignment
+	data = other.data;
+	delete next;
+	nxt = NULL;
+	next = other.next ? new Node(*other.next) : 0;
+	return *this;
+}
+```
+Why is this dangerous?
+- n = n;
+- deletes n and then tries to copy n to n ---undefined behaviour
+- ALWAYS ---when writing operator=, check for self assignment
