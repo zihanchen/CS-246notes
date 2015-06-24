@@ -114,14 +114,53 @@ s = billy; //copy but no construction
 ```C++
 Node &Node::operator=(const Node &other) {
 	if (this == &other) return *this;//this is for self assignment
-	data = other.data;
-	delete next;
-	nxt = NULL;
+	Node *tmp = next;
 	next = other.next ? new Node(*other.next) : 0;
+	data = other.data;
+	delete tmp;
 	return *this;
 }
 ```
 Why is this dangerous?
-- n = n;
-- deletes n and then tries to copy n to n ---undefined behaviour
-- ALWAYS ---when writing operator=, check for self assignment
+- n = n;  
+- deletes n and then tries to copy n to n ---undefined behaviour  
+- ALWAYS ---when writing operator=, check for self assignment  
+  
+Alternate copy and swap 
+```C++
+void Node::swap(Node &other) {
+	int tmpdata = data;
+	data = other.data;
+	other.data = tmpdata;
+
+	Node *tmpnext = next;
+	next = other.next;
+	other.next = tmpnext;
+}
+
+Node  &Node::operator=(Node other) {
+	swap(other);
+	return *this;
+}
+```
+
+##Rule of Three  
+If you need to write a custom version of:  
+- Copy Constructor
+- Assignment operator
+- Destructor
+
+Then you likely need to write a custom version of all three  
+Notice: operator`=`is a member function, not a stand alone function  
+When an operator is declared as a member function, `this`plays the role of the LHS argument  
+- We cannot move a function as a member function if the first argument is not the struct type
+- So it must be external  
+What about I/O operations?
+- means we have to do `v << cout` which is strange  
+So do fine operator `<<` as external  
+Certain operators must be members:  
+- operator`=`
+- operator`[]`
+- operator `->`
+- operator `()`
+- operator `T()` //cast operator
