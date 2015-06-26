@@ -51,7 +51,7 @@ it at the end of the program execution
 >- Also note that we are not giving a pointer of a destructor, since a dessturctor  
 has an implicit this pointer
 
-Problem: anyone can still create their own wallet-we don't forece them to use our  
+Problem: anyone can still create their own wallet-we don't force them to use our  
 GetInstance method  
 
 ######Encapsulation  
