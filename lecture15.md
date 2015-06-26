@@ -36,15 +36,17 @@ int main() {
 ```
 #####Static pointer to instance
 - See code example in remote
-- WHne should we deallocate a singleton?
+- When should we deallocate a singleton?
 - How do we know when all our clients are finished using it?  
 A solution is to use reference counting in a destructor(once all clients have tried  
 to delete, actually delete it)  
 Another is just to delete it at the end of the main  
 None of these sound particularly clean. They rely on good behaviour of clinents  
 There is a C/C++ function called atexet form <cstdlib>  
-atexit takes a pointer to a procedure that has no auguments and returns void and calls  
+atexit takes a pointer to a procedure that has no auguments and returns void and calls 
 it at the end of the program execution  
+
+
 >Note: atexit is a stack of thesefunctions(execution is last-in first-out)  
 >- Also note that we are not giving a pointer of a destructor, since a dessturctor  
 has an implicit this pointer
