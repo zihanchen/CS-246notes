@@ -33,7 +33,8 @@ Building an Object-Oriented system involves identifying the Key abstractions
 Drawing athe relationship can help aid in design, implementation and understanding  
 
 ###UML(Unified Modelling Language)  
-Modelling a class 
+Modelling a class  
+   
 | Vector | 
 | ------ |
 | -x: integer |
