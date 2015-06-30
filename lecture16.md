@@ -23,7 +23,27 @@ class Vector {																 |
 																			 |		
 																			 |
  Vector Vector::operator+(const Vector &v) {								 |
-	 Vector v1(x + v.x, y + v.y); <---this is perfectly fine because of -----|
+	 Vector v1(x + v.x, y + v.y); //<---this is perfectly fine because of ---|
 	 return v1;
 }
 ```
+
+##System Modelling  
+Building an Object-Oriented system involves identifying the Key abstractions  
+Drawing athe relationship can help aid in design, implementation and understanding  
+
+###UML(Unified Modelling Language)  
+Modelling a class 
+|Vector| <---- Name  
+|------|
+|-x: integer| <--- Fields(optional)
+|-y: integer|
+|------|
+|...|   <------ Methods(optional)
+|...|  
+  
+Visibility  
+- `-` means private
+- `+` means public
+  
+Show important parts that are needed for the design(not flag variables)
