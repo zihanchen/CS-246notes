@@ -12,7 +12,7 @@
 
   
 >What does private mean?  
->- Accessible to class members and classes friends  <------------------------|
+>- Accessible to class members and classes friends  <--------------------------------|
 
 ```C++																		
 class Vector {																 |
