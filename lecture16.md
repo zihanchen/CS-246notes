@@ -34,13 +34,13 @@ Drawing athe relationship can help aid in design, implementation and understandi
 
 ###UML(Unified Modelling Language)  
 Modelling a class 
-|Vector| 
-|------|
-|-x: integer|
-|-y: integer|
-|------|
-|...|
-|...|  
+| Vector | 
+| ------ |
+| -x: integer |
+| -y: integer |
+| ------ |
+| ... |
+| ... |  
   
 Visibility  
 - `-` means private
