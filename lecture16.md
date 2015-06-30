@@ -39,11 +39,21 @@ Modelling a class
 | ------ |
 | -x: integer |
 | -y: integer |
-| ... |
+| ...(methods) |
 | ... |  
   
 Visibility  
 - `-` means private
 - `+` means public
   
-Show important parts that are needed for the design(not flag variables)
+Show important parts that are needed for the design(not flag variables)  
+
+When a class is instantiated  
+1. Space allocated
+2. Default constructors/init list for all fields in declaration order  
+3. Constructor body runs  
+  
+When an object is destoryed  
+1. Destructor body runs  
+2. Destructors invoked for all fields in reverse declaration order  
+3. Space is deallocated
