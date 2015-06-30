@@ -34,12 +34,12 @@ Drawing athe relationship can help aid in design, implementation and understandi
 
 ###UML(Unified Modelling Language)  
 Modelling a class 
-|Vector| <---- Name  
+|Vector| 
 |------|
-|-x: integer| <--- Fields(optional)
+|-x: integer|
 |-y: integer|
 |------|
-|...|   <------ Methods(optional)
+|...|
 |...|  
   
 Visibility  
