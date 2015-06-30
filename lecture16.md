@@ -13,9 +13,7 @@
   
 >What does private mean?  
 >- Accessible to class members and classes friends  <------------------------|
-																			 |
-																			 |
-Consider																	 |
+
 ```C++																		
 class Vector {																 |
 		int x, y;															 |
