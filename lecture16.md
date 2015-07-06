@@ -88,7 +88,7 @@ Composition in UML:
 ```
 -------			   ------------
 |Plane|	    v1,v2  |Vector    |
-|     |<>--------->|-x:integer|
+|     |<>--------->|-x:integer|   (NOTE: the diamond sign is SOLID)
 |	  |			   |-y:integer|
 -------			   ------------
 ```
@@ -104,4 +104,65 @@ Composition in UML:
 - Compare carcar parts in a car ("onws-a") vs car parts in a catalogue
 - The catalogue contains the parts, but the parts have an independent existence  
 
+We call aggregations a "has-a" relationship  
+"has-a" relationship typical characteristics:
+- B has an existance outside of its association with A
+- If A is detroyed, B lives on
+- If A is copied, B is not(shallow copy)
+- Implies copies of A share the same B
 
+Example: Parts in a catalogue, ducks on a pond  
+- Aggregation in UML
+```
+------			  ------
+|Pond|       0..* |Duck|
+|    |<>--------->|    |   (NOTE: the diamond sign is NOT solid)
+|    |			  ------
+------
+```
+Typical Implementation pointer fields  
+```C++
+class Pond {
+	Duck *duck[madDucks];
+};
+
+class catalogue {
+	Pond *p;
+};
+```
+
+##Inheritance  
+Suppose we want to keep track of our Book Collection  
+```C++
+class Book {
+		string title, author;
+		int numPages;
+	Public:
+		Book(...);
+		...
+};
+// But for our textbookds, we want to know topic as well
+
+class TextBook {
+		string title, author;
+		int numPages;
+		string topic;
+	public:
+		TextBook(...);
+		...
+};
+// We want to keep track of our comic too
+...
+```
+- We can do this, but we are repeating  ourselves a lot! We alse fail to capture relationship samong our three types of books  
+- How would we create an array(or linked list) that contains a mixtype of these three types?  
+  
+Solution 1: Array of void* -store pointers to Book, TextBook and ComicBook, cast to void*;  
+Solution 2: Use union  
+```C++
+Union BookTypes {Book *b; TextBook *tb; ComicBook *cb;};
+BookTypes *library[30];
+```
+Neither approach is particularly appearing, we subverting the types system and repeat ourselves a lot  
+Observe: ComicBooks and TextBooks are kind of Books - i.e. Book with additional functionality  
+Object-oriented languages generally provide inheritonce to model this situation
