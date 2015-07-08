@@ -47,17 +47,17 @@ class ComicBook: public Book {
 ```
 Doesn't work for 2 reasons:  
 1. title/author/numPages are not accessible in ComicBook  
-	- When an object is constructed:
+	- When an object is constructed:  
 		1. Space is allocated  
 		2. Superclass part is constructed  
 		3. Field constructors are called  
 		4. Constructor body runs  
 
 	So our constructor should be:  
-	```C++  
+```C++  
 	ComicBook(string title, string author, int numPages, string protag):
 		Book(title, author, numPages), protag(protag) {}
-	```
+```
 
 2. Since Book has no default constructor the construct fails  
 
